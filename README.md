@@ -84,6 +84,8 @@ onTriggerKeyUp will return the caret position of trigger. If you need to hint us
 
 please checkout [Main.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Main.js) if you want to see more detail.
 
+Note: [Main.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Main.js) is the example to demonstrate how to use [react-taggable-input](https://github.com/blackbing/react-taggable-input). I make it simple in the behavior after triggered callback.
+
 [npm-badge]: https://img.shields.io/npm/v/react-taggable-input.svg?style=flat-square
 [npm]: https://www.npmjs.com/package/react-taggable-input
 
