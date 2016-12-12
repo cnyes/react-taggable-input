@@ -1,0 +1,114 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+
+  <title>React-taggable-input</title>
+  <meta name="description" content="tag or mention in input element when keydown # or @ or any other character.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">React-taggable-input</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">tag or mention in input element when keydown # or @ or any other character.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/blackbing/react-taggable-input/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/blackbing/react-taggable-input/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/blackbing/react-taggable-input" class="code">View React-taggable-input on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a id="react-taggable-input" class="anchor" href="#react-taggable-input" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>react-taggable-input</h1>
+
+<p>tag or mention in input element when keydown # or @ or any other character.</p>
+
+<div id="app">APPLICATION CONTENT</div>
+
+<h1>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h1>
+
+<pre><code>npm i react-taggable-input
+</code></pre>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<div class="highlight highlight-source-js"><pre>        <span class="pl-k">&lt;</span>TaggableInput
+          ref<span class="pl-k">=</span>{ (<span class="pl-smi">input</span>) <span class="pl-k">=&gt;</span> (<span class="pl-v">this</span>.<span class="pl-c1">input</span> <span class="pl-k">=</span> input) }
+          disabled<span class="pl-k">=</span>{ <span class="pl-v">this</span>.<span class="pl-smi">props</span>.<span class="pl-c1">disabled</span> }
+          defaultValue<span class="pl-k">=</span>{ defaultValue }
+          className<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>submit-input<span class="pl-pds">"</span></span>
+          placeHolder<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>輸入 #<span class="pl-pds">"</span></span>
+          trigger<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>#＃<span class="pl-pds">"</span></span>
+          maxLength<span class="pl-k">=</span>{ <span class="pl-c1">100</span> }
+          onKeyDown<span class="pl-k">=</span>{ <span class="pl-v">this</span>.<span class="pl-smi">handleKeyDown</span> }
+          onTrigger<span class="pl-k">=</span>{ <span class="pl-v">this</span>.<span class="pl-smi">handleTrigger</span> }
+          onTriggerKeyUp<span class="pl-k">=</span>{ <span class="pl-v">this</span>.<span class="pl-smi">handleTriggerKeyUp</span> }
+          onChange<span class="pl-k">=</span>{ <span class="pl-v">this</span>.<span class="pl-smi">handleChange</span> }
+          onSubmit<span class="pl-k">=</span>{ <span class="pl-v">this</span>.<span class="pl-smi">handleSubmit</span> }
+        <span class="pl-k">/</span><span class="pl-k">&gt;</span></pre></div>
+
+<h1>
+<a id="props" class="anchor" href="#props" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>props</h1>
+
+<pre><code>trigger: PropTypes.string.isRequired,
+disabled: PropTypes.bool,
+className: PropTypes.string,
+defaultValue: PropTypes.string,
+placeHolder: PropTypes.string,
+maxLength: PropTypes.number,
+onKeyDown: PropTypes.func,
+onTrigger: PropTypes.func,
+onTriggerKeyUp: PropTypes.func,
+onChange: PropTypes.func,
+onSubmit: PropTypes.func,
+</code></pre>
+
+<h1>
+<a id="more-detail" class="anchor" href="#more-detail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More Detail</h1>
+
+<p>please checkout <a href="https://github.com/blackbing/react-taggable-input/blob/master/src/components/Main.js">Main.js</a> if you want to see more detail.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/blackbing" class="avatar"><img src="https://avatars2.githubusercontent.com/u/47012?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/blackbing">blackbing</a> maintains <a href="https://github.com/blackbing/react-taggable-input">React-taggable-input</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/blackbing/react-taggable-input/tarball/master" class="tar">tar</a><a href="https://github.com/blackbing/react-taggable-input/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+
+  <script type="text/javascript" src="dist/assets/app.js"></script>
+</body>
+</html>

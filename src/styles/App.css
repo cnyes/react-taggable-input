@@ -1,0 +1,62 @@
+/* Base Application Styles */
+body {
+}
+
+.index {
+  margin: auto;
+  width: 500px;
+}
+
+.index h1 {
+  text-align: center;
+}
+
+.index img {
+  margin: 40px auto;
+  border-radius: 4px;
+  background: #fff;
+  display: block;
+}
+
+.index .notice {
+  margin: 20px auto;
+  padding: 15px 0;
+  text-align: center;
+  border: 1px solid #000;
+  border-width: 1px 0;
+  background: #666;
+}
+
+.index ul {
+  width: 498px;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 2px 8px #888888;
+}
+
+.index ul li{
+  background-color: #007eff;
+  list-style: none;
+  padding: 10px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.submit-input {
+  height: 22px;
+  font-size: 16px;
+  border: 1px solid;
+  line-height: 22px;
+  padding: 12px;
+  overflow-y: hidden;
+}
+
+.submit-input a {
+  background-color: #007eff;
+  color: #FFF;
+  padding: 4px;
+  text-decoration: none;
+}
