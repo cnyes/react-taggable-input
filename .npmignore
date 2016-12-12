@@ -1,0 +1,12 @@
+/cfg
+/coverage
+/images
+/javascripts
+/stylesheets
+/codecov.yml
+/index.html
+/karma.conf.js
+/params.json
+/server.js
+/webpack.config.js
+/yarn.lock
