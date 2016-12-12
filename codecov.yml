@@ -4,3 +4,5 @@ coverage:
   precision: 2
   round: down
   range: "0...100"
+ignore:
+  - "src/components/Main.js"
