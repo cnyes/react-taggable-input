@@ -1,6 +1,6 @@
 # react-taggable-input [![npm package][npm-badge]][npm] [![Travis][build-badge]][build] [![codecov][codecov-badge]][codecov]
 
-tag or mention in input element when keydown # or @ or any other character.
+tag or mention in input element when keydown # or @ or any other character. This component is a div with `conteneditable` so you can apply any style on it if you want. It is also possible to paste `html` directly.
 
 [![react-taggable-input](http://bingo.d.pr/LG6X.gif)](http://blog.blackbing.net/react-taggable-input/)
 
@@ -44,6 +44,41 @@ onTriggerKeyUp: PropTypes.func,
 onChange: PropTypes.func,
 onSubmit: PropTypes.func,
 ```
+## trigger
+
+which character would be trigger. e.g, `'#＃'`. it will only trigger *one* `character`.
+
+## defaultValue
+
+defaultValue is a html string. if you want to set the initial value for it.
+
+## placeHolder
+
+placeHolder is text only. It provides placeHolder function like `<input />` element.
+
+## onTrigger
+
+onTrigger will return a triggered value. it will return null if there is no trigger.
+
+e.g, 
+* `#` -> `''`
+* `#123` -> `'123'`
+* `123` -> `null`
+
+## onTriggerKeyUp
+
+onTriggerKeyUp will return the caret position of trigger. If you need to hint user how to use this trigger, it is very useful. here is an example.
+
+![react-taggable-input-onTriggerKeyUp](http://bingo.d.pr/1gIzU.png)
+
+## onChange
+
+`onChange` will return the value when user change the value.
+
+## onSubmit
+
+`onSubmit` will be fired if user is not in trigger mode and click `Enter`. This behavior is similar to the original input element. 
+
 
 # More Detail
 
