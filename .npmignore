@@ -10,3 +10,6 @@
 /server.js
 /webpack.config.js
 /yarn.lock
+/dist/favicon.ico
+/dist/index.html
+/dist/assets/app.*
