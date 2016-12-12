@@ -1,6 +1,6 @@
 {
   "name": "react-taggable-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "tag or mention in input element when keydown # or @ or any other character.",
   "main": "dist/assets/lib.js",
   "scripts": {
