@@ -69,6 +69,7 @@
     "normalize.css": "^4.0.0",
     "null-loader": "^0.1.1",
     "open": "0.0.5",
+    "phantomjs-polyfill": "^0.0.2",
     "phantomjs-prebuilt": "^2.1.14",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",

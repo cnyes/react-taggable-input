@@ -8,7 +8,8 @@ module.exports = function(config) {
     basePath: '',
     browsers: [ 'PhantomJS' ],
     files: [
-      'test/loadtests.js'
+      'test/loadtests.js',
+      './node_modules/phantomjs-polyfill/bind-polyfill.js'
     ],
     port: 8000,
     captureTimeout: 60000,
