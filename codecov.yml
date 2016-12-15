@@ -5,4 +5,4 @@ coverage:
   round: down
   range: "0...100"
 ignore:
-  - "src/components/Main.js"
+  - "src/components/Demo.js"

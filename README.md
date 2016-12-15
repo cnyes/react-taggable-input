@@ -5,7 +5,7 @@ tag or mention in input element when keydown # or @ or any other character. This
 [![react-taggable-input](http://bingo.d.pr/LG6X.gif)](http://blog.blackbing.net/react-taggable-input/)
 
 
-# Install 
+# Install
 
 ```
 npm i react-taggable-input
@@ -60,7 +60,7 @@ placeHolder is text only. It provides placeHolder function like `<input />` elem
 
 onTrigger will return a triggered value. it will return null if there is no trigger.
 
-e.g, 
+e.g,
 * `#` -> `''`
 * `#123` -> `'123'`
 * `123` -> `null`
@@ -77,14 +77,14 @@ onTriggerKeyUp will return the caret position of trigger. If you need to hint us
 
 ## onSubmit
 
-`onSubmit` will be fired if user is not in trigger mode and click `Enter`. This behavior is similar to the original input element. 
+`onSubmit` will be fired if user is not in trigger mode and click `Enter`. This behavior is similar to the original input element.
 
 
 # More Detail
 
-please checkout [Main.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Main.js) if you want to see more detail.
+please checkout [Demo.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Demo.js) if you want to see more detail.
 
-Note: [Main.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Main.js) is the example to demonstrate how to use [react-taggable-input](https://github.com/blackbing/react-taggable-input). I make it simple in the behavior after triggered callback.
+Note: [Demo.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Demo.js) is the example to demonstrate how to use [react-taggable-input](https://github.com/blackbing/react-taggable-input). I make it simple in the behavior after triggered callback.
 
 [npm-badge]: https://img.shields.io/npm/v/react-taggable-input.svg?style=flat-square
 [npm]: https://www.npmjs.com/package/react-taggable-input
