@@ -24,16 +24,12 @@ class TestComponent extends Component {
     this.setState({ value });
   }
 
-  input() {
-    return this.refs.tagsinput.refs.input;
-  }
-
   render() {
     const props = this.props;
     return (
       <div className="index">
         <TaggableInput
-          ref={ (input) => (this.input = input) }
+          ref={ (input) => { this.input = input; } }
           { ...props }
           handleChange={ this.handleChange }
         />
@@ -45,6 +41,7 @@ class TestComponent extends Component {
 TestComponent.defaultProps = {
   trigger: '#＃',
   className: 'test',
+  placeHolder: 'test',
 };
 
 
@@ -71,15 +68,31 @@ function click(comp) {
 */
 
 describe('TaggableInputComponent', () => {
-  describe('basic', () => {
-    let subject;
+  let subject;
 
-    beforeEach(() => {
-      subject = TestUtils.renderIntoDocument(<TestComponent />);
-    });
+  beforeEach(() => {
+    subject = TestUtils.renderIntoDocument(<TestComponent />);
+  });
 
-    it('should render exist', () => {
+  describe('initial rendering', () => {
+
+    it('should render component', () => {
       expect(TestUtils.isCompositeComponent(subject)).to.equal(true);
     });
+
+    it('should have placeholder class', () => {
+      const component = TestUtils.findRenderedDOMComponentWithClass(subject, 'placeholder');
+      expect(component).to.not.equal(null);
+    });
+
+    it('should have test class', () => {
+      const component = TestUtils.findRenderedDOMComponentWithClass(subject, 'test');
+      expect(component).to.not.equal(null);
+    });
+
+    it('should have ref callback', () => {
+      expect(subject.input).to.not.equal(null);
+    });
+
   });
 });
