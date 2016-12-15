@@ -10,6 +10,12 @@ import TestUtils, {
 
 import TaggableInput from 'components//TaggableInput.js';
 
+const defaultProps = {
+  trigger: '#＃',
+  className: 'test',
+  placeHolder: 'test placeHolder',
+}
+
 class TestComponent extends Component {
 
   constructor() {
@@ -38,40 +44,15 @@ class TestComponent extends Component {
   }
 }
 
-TestComponent.defaultProps = {
-  trigger: '#＃',
-  className: 'test',
-  placeHolder: 'test',
-};
-
-
-/*
-function keyDown(comp, code) {
-  TestUtils.Simulate.keyDown(comp.input(), {keyCode: code});
-}
-
-function keyUp(comp, code) {
-  TestUtils.Simulate.keyUp(comp.input(), {keyCode: code});
-}
-
-function blur(comp) {
-  TestUtils.Simulate.blur(comp.input());
-}
-
-function focus(comp) {
-  TestUtils.Simulate.focus(comp.input());
-}
-
-function click(comp) {
-  TestUtils.Simulate.click(comp);
-}
-*/
+TestComponent.defaultProps = defaultProps;
 
 describe('TaggableInputComponent', () => {
   let subject;
+  let element;
 
   beforeEach(() => {
     subject = TestUtils.renderIntoDocument(<TestComponent />);
+    element = TestUtils.findRenderedDOMComponentWithClass(subject, defaultProps.className);
   });
 
   describe('initial rendering', () => {
@@ -81,18 +62,19 @@ describe('TaggableInputComponent', () => {
     });
 
     it('should have placeholder class', () => {
-      const component = TestUtils.findRenderedDOMComponentWithClass(subject, 'placeholder');
-      expect(component).to.not.equal(null);
+      const el = TestUtils.findRenderedDOMComponentWithClass(subject, 'placeholder');
+      expect(el).to.not.equal(null);
     });
 
     it('should have test class', () => {
-      const component = TestUtils.findRenderedDOMComponentWithClass(subject, 'test');
-      expect(component).to.not.equal(null);
+      const el = TestUtils.findRenderedDOMComponentWithClass(subject, defaultProps.className);
+      expect(el).to.not.equal(null);
     });
 
-    it('should have ref callback', () => {
-      expect(subject.input).to.not.equal(null);
+    it('should have placeHolder', () => {
+      expect(element.textContent).to.equal(defaultProps.placeHolder);
     });
 
   });
+
 });
