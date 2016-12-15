@@ -199,10 +199,15 @@ class TaggableInput extends PureComponent {
         }
         break;
       }
-      case 'Escape':
-      case ' ': {
+      case 'Escape': {
         if (!this.onComposition) {
           this.cancelTag(true);
+        }
+        break;
+      }
+      case ' ': {
+        if (!this.onComposition) {
+          this.props.onKeyDown(key);
         }
         break;
       }
