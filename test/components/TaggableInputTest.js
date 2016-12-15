@@ -49,13 +49,19 @@ TestComponent.defaultProps = defaultProps;
 describe('TaggableInputComponent', () => {
   let subject;
   let element;
+  let component;
 
   beforeEach(() => {
     subject = TestUtils.renderIntoDocument(<TestComponent />);
     element = TestUtils.findRenderedDOMComponentWithClass(subject, defaultProps.className);
+    component = subject.input
   });
 
   describe('initial rendering', () => {
+
+    it('should have input ref callback', () => {
+      expect(component).to.not.equal(null);
+    });
 
     it('should render component', () => {
       expect(TestUtils.isCompositeComponent(subject)).to.equal(true);
@@ -72,6 +78,19 @@ describe('TaggableInputComponent', () => {
     });
 
     it('should have placeHolder', () => {
+      expect(element.textContent).to.equal(defaultProps.placeHolder);
+    });
+  });
+
+  describe('basic behavior', () => {
+
+    it('should set empty value when focus', () => {
+      TestUtils.Simulate.focus(element);
+      expect(element.textContent).to.equal('');
+    });
+
+    it('should set placeholder value when blur', () => {
+      TestUtils.Simulate.blur(element);
       expect(element.textContent).to.equal(defaultProps.placeHolder);
     });
 
