@@ -6,10 +6,9 @@ process.env.NODE_ENV = 'test';
 module.exports = function(config) {
   config.set({
     basePath: '',
-    browsers: [ 'PhantomJS' ],
+    browsers: [ 'Chrome' ],
     files: [
-      'test/loadtests.js',
-      './node_modules/phantomjs-polyfill/bind-polyfill.js'
+      'test/loadtests.js'
     ],
     port: 8000,
     captureTimeout: 60000,
