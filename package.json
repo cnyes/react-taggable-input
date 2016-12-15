@@ -5,6 +5,7 @@
   "main": "dist/assets/lib.js",
   "scripts": {
     "start": "node server.js --env=dev",
+    "prepare-test": "./node_modules/phantomjs-prebuilt/install.js",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "posttest": "npm run lint",

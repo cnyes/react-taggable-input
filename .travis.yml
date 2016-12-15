@@ -18,6 +18,7 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 script:
+  - npm run prepare-test
   - npm test
   - npm run dist
 
