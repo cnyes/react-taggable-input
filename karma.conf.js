@@ -1,12 +1,14 @@
 var webpackCfg = require('./webpack.config');
+var isCI = process.env.CI;
 
 // Set node environment to testing
 process.env.NODE_ENV = 'test';
 
 module.exports = function(config) {
-  config.set({
+
+  var configs = {
     basePath: '',
-    browsers: [ 'PhantomJS' ],
+    browsers: [ 'Chrome' ],
     files: [
       'test/loadtests.js'
     ],
@@ -33,5 +35,10 @@ module.exports = function(config) {
         { type: 'lcov' }
       ]
     }
-  });
+  };
+  if (isCI) {
+    configs.browsers = ['PhantomJS'];
+    configs.files.push('./node_modules/phantomjs-polyfill/bind-polyfill.js');
+  }
+  config.set(configs);
 };
