@@ -14,7 +14,7 @@ const defaultProps = {
   trigger: '#＃',
   className: 'test',
   placeHolder: 'test placeHolder',
-}
+};
 
 class TestComponent extends Component {
 
@@ -47,51 +47,54 @@ class TestComponent extends Component {
 TestComponent.defaultProps = defaultProps;
 
 describe('TaggableInputComponent', () => {
-  let subject;
-  let element;
-  let component;
 
-  beforeEach(() => {
-    subject = TestUtils.renderIntoDocument(<TestComponent />);
-    element = TestUtils.findRenderedDOMComponentWithClass(subject, defaultProps.className);
-    component = subject.input
-  });
+  describe('initial rendering', function() {
 
-  describe('initial rendering', () => {
+    beforeEach(() => {
+      this.subject = TestUtils.renderIntoDocument(<TestComponent />);
+      this.element = TestUtils.findRenderedDOMComponentWithClass(this.subject, defaultProps.className);
+      this.component = this.subject.input
+    });
 
     it('should have input ref callback', () => {
-      expect(component).to.not.equal(null);
+      expect(this.component).to.not.equal(null);
     });
 
     it('should render component', () => {
-      expect(TestUtils.isCompositeComponent(subject)).to.equal(true);
+      expect(TestUtils.isCompositeComponent(this.subject)).to.equal(true);
     });
 
     it('should have placeholder class', () => {
-      const el = TestUtils.findRenderedDOMComponentWithClass(subject, 'placeholder');
+      const el = TestUtils.findRenderedDOMComponentWithClass(this.subject, 'placeholder');
       expect(el).to.not.equal(null);
     });
 
     it('should have test class', () => {
-      const el = TestUtils.findRenderedDOMComponentWithClass(subject, defaultProps.className);
+      const el = TestUtils.findRenderedDOMComponentWithClass(this.subject, defaultProps.className);
       expect(el).to.not.equal(null);
     });
 
     it('should have placeHolder', () => {
-      expect(element.textContent).to.equal(defaultProps.placeHolder);
+      expect(this.element.textContent).to.equal(defaultProps.placeHolder);
     });
   });
 
-  describe('basic behavior', () => {
+  describe('basic behavior', function() {
+
+    beforeEach(() => {
+      this.subject = TestUtils.renderIntoDocument(<TestComponent />);
+      this.element = TestUtils.findRenderedDOMComponentWithClass(this.subject, defaultProps.className);
+      this.component = this.subject.input
+    });
 
     it('should set empty value when focus', () => {
-      TestUtils.Simulate.focus(element);
-      expect(element.textContent).to.equal('');
+      TestUtils.Simulate.focus(this.element);
+      expect(this.element.textContent).to.equal('');
     });
 
     it('should set placeholder value when blur', () => {
-      TestUtils.Simulate.blur(element);
-      expect(element.textContent).to.equal(defaultProps.placeHolder);
+      TestUtils.Simulate.blur(this.element);
+      expect(this.element.textContent).to.equal(defaultProps.placeHolder);
     });
 
   });
