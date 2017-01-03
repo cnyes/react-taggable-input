@@ -82,17 +82,17 @@ onTriggerKeyUp will return the caret position of trigger. If you need to hint us
 
 # More Detail
 
-please checkout [Demo.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Demo.js) if you want to see more detail.
+please checkout [Demo.js](https://github.com/cnyes/react-taggable-input/blob/master/src/components/Demo.js) if you want to see more detail.
 
-Note: [Demo.js](https://github.com/blackbing/react-taggable-input/blob/master/src/components/Demo.js) is the example to demonstrate how to use [react-taggable-input](https://github.com/blackbing/react-taggable-input). I make it simple in the behavior after triggered callback.
+Note: [Demo.js](https://github.com/cnyes/react-taggable-input/blob/master/src/components/Demo.js) is the example to demonstrate how to use [react-taggable-input](https://github.com/cnyes/react-taggable-input). I make it simple in the behavior after triggered callback.
 
 [npm-badge]: https://img.shields.io/npm/v/react-taggable-input.svg?style=flat-square
 [npm]: https://www.npmjs.com/package/react-taggable-input
 
-[build-badge]: https://img.shields.io/travis/blackbing/react-taggable-input/master.svg?style=flat-square
-[build]: https://travis-ci.org/blackbing/react-taggable-input
+[build-badge]: https://img.shields.io/travis/cnyes/react-taggable-input/master.svg?style=flat-square
+[build]: https://travis-ci.org/cnyes/react-taggable-input
 
-[codecov-badge]: https://codecov.io/gh/blackbing/react-taggable-input/branch/master/graph/badge.svg
-[codecov]: https://codecov.io/gh/blackbing/react-taggable-input
+[codecov-badge]: https://codecov.io/gh/cnyes/react-taggable-input/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/cnyes/react-taggable-input
 
 
