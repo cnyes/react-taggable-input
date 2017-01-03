@@ -2,7 +2,7 @@
 
 tag or mention in input element when keydown # or @ or any other character. This component is a div with `conteneditable` so you can apply any style on it if you want. It is also possible to paste `html` directly.
 
-[![react-taggable-input](http://bingo.d.pr/LG6X.gif)](http://blog.blackbing.net/react-taggable-input/)
+[![react-taggable-input](http://bingo.d.pr/LG6X.gif)](https://cnyes.github.io/react-taggable-input/)
 
 
 # Install
